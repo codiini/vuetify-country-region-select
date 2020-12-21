@@ -1,23 +1,75 @@
 {
   "name": "vuetify-country-region-select",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "## Project setup ``` yarn install ```",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codiini/vuetify-country-region-select.git"
+  },
+  "keywords": [
+    "vue-country-region-select",
+    "vue-country-dropdown",
+    "vuetify-country-region-select",
+    "vue-country-region-select",
+    "vue-country-state-select",
+    "vue country select",
+    "vue region select",
+    "select",
+    "country",
+    "region",
+    "country select",
+    "region select",
+    "state select",
+    "state",
+    "vuetify state select",
+    "country dropdown",
+    "dropdown",
+    "region dropdown",
+    "state dropdown",
+    "vuetify-country-region-dropdown",
+    "vuetify-country-state-dropdown",
+    "vuetify dropdown component",
+    "country and state select"
+  ],
+  "author": {
+    "name": "Iniubong Obonguko",
+    "email": "iniubongobonguko2018@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codiini/vuetify-country-region-select/issues"
+  },
+  "homepage": "https://github.com/codiini/vuetify-country-region-select#readme",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vuetifyCountryRegionSelect ./src/install.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vuetifyCountryRegionSelect.umd.min.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuetify": "^2.3.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "deepmerge": "^4.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
