@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-row>
+      <v-col cols="12" sm="3">
+        {{ country.countryName }}
+        <vuetify-country-select outlined v-model="country" label="Choose your country" />
+      </v-col>
+      <v-col cols="12" sm="4">
+        {{ region.name }}
+        <vuetify-region-select v-model="region" filled label="Choose your State" />
+      </v-col>
+    </v-row>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import VuetifyCountrySelect from "@/components/vuetify-country-select";
+import VuetifyRegionSelect from "@/components/vuetify-region-select";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    VuetifyCountrySelect,
+    VuetifyRegionSelect,
+  },
+  data: () => ({
+    country: "",
+    region: "",
+  }),
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
