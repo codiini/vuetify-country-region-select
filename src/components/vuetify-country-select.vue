@@ -1,27 +1,31 @@
 <template>
-  <v-select
-    :items="countries"
-    item-text="countryName"
-    item-value="text"
-    :value="value"
-    v-model="country"
-    :outlined="outlined"
-    :filled="filled"
-    :flat="flat"
-    :label="label"
-    :country="country"
-    @input="selectCountry()"
-    return-object
-  ></v-select>
+    <v-select
+      :items="countries"
+      item-text="countryName"
+      item-value="text"
+      :value="value"
+      v-model="country"
+      :outlined="outlined"
+      :filled="filled"
+      :flat="flat"
+      :label="label"
+      :country="country"
+      @input="selectCountry()"
+      return-object
+    ></v-select>
 </template>
 
 
 <script>
+import { VSelect } from "vuetify/lib";
 import countries from "@/data.js";
-import { EventBus } from "../event-bus.js";
+import { EventBus } from "../main";
 
 export default {
   name: "VuetifyCountrySelect",
+  components: {
+    VSelect,
+  },
   props: {
     countriess: {
       type: [Array],
