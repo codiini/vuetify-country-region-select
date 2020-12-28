@@ -1,25 +1,29 @@
 <template>
-  <v-select
-    :items="regionList"
-    item-value="name"
-    item-text="name"
-    :value="value"
-    v-model="region"
-    :outlined="outlined"
-    :filled="filled"
-    :flat="flat"
-    :label="label"
-    return-object
-    @input="selectRegion()"
-  ></v-select>
+    <v-select
+      :items="regionList"
+      item-value="name"
+      item-text="name"
+      :value="value"
+      v-model="region"
+      :outlined="outlined"
+      :filled="filled"
+      :flat="flat"
+      :label="label"
+      return-object
+      @input="selectRegion()"
+    ></v-select>
 </template>
 
 <script>
+import { VSelect } from "vuetify/lib";
 import states from "@/data.js";
-import { EventBus } from "../event-bus";
+import { EventBus } from "../main";
 
 export default {
   name: "VuetifyRegionSelect",
+  components: {
+    VSelect,
+  },
   props: {
     countryValue: {
       type: String,
