@@ -1,6 +1,6 @@
 {
   "name": "vuetify-country-region-select",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "## Project setup ``` yarn install ```",
   "repository": {
@@ -49,8 +49,7 @@
   },
   "main": "dist/vuetifyCountryRegionSelect.umd.min.js",
   "files": [
-    "dist/*",
-    "src/**/*.vue"
+    "dist/vuetifyCountryRegionSelect.umd.min.js"
   ],
   "dependencies": {
     "core-js": "^3.6.5",
