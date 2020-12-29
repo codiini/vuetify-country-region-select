@@ -50,10 +50,7 @@
   "main": "dist/vuetifyCountryRegionSelect.umd.min.js",
   "files": [
     "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "src/**/*.vue"
   ],
   "dependencies": {
     "core-js": "^3.6.5",
